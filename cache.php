@@ -32,12 +32,15 @@ class Utils {
         // cache已过期或者cache在(start + expire, +inf)，透传比例为factor的请求到后台实时请求并更新cache
         $data = self::$method($params);
         // todo: 只缓存请求成功的数据 需要过滤掉失败的情况
-        $doubleExpire = time() + 2 * $expire;
-        $value = array(
-            'data' => $data,
-            'doubleExpire' => $doubleExpire,
-        );
-        $ret = $memcached->set($csfKey, $value, $doubleExpire);
+        if (isset($data['requestSucc']) && $data['requestSucc'] == 0) {
+            unset($data['requestSucc']);
+            $doubleExpire = time() + 2 * $expire;
+            $value = array(
+                'data' => $data,
+                'doubleExpire' => $doubleExpire,
+            );
+            $ret = $memcached->set($csfKey, $value, $doubleExpire);
+        }
         return $data;
     }
 
@@ -47,8 +50,15 @@ class Utils {
         }
 
         // todo : 请求后端接口
+        // $data = array();
+        // if (isset($data['ret']) && $data['ret'] == 0) {
+        //     $data['requestSucc'] = 0;
+        // } else {
+        //     $data['requestSucc'] = -1;
+        // }
 
         return array(
+            'requestSucc' => 0,
             'product_name' => '测试',
         );
     }
