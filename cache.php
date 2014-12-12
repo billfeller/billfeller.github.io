@@ -103,7 +103,7 @@ class Utils {
     public static function getProductDetail($params) {
         // TODO: 参数处理
 
-        // todo : 请求后端接口
+        // TODO : 请求后端接口并判断是否请求成功
         // $data = array();
         // if (isset($data['ret']) && $data['ret'] == 0) {
         //     $data['resultCode'] = 0;
