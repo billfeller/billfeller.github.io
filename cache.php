@@ -1,4 +1,12 @@
 <?php
+// vim: set expandtab cindent tabstop=4 shiftwidth=4 fdm=marker:
+ 
+/**
+ * @file     cache.php
+ * @version  1.0
+ * @author   wade
+ * @date     2014-12-12 11:00:58
+ */
 
 class Utils {
     const CACHED_STRATEGY_FACETOR_PRIFIX = 'csf';
