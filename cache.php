@@ -125,7 +125,8 @@ $params = array(
 );
 $key = 'pid_10001';
 
-$data = Utils::cacheStrategy($method, $params, $key);
-var_dump($data);
+// $data = Utils::cacheStrategy($method, $params, $key);
+// var_dump($data);
 
-// Utils::cacheStrategyOnce($method, $params, $key);
+// $data = Utils::cacheStrategyOnce($method, $params, $key);
+// var_dump($data);
