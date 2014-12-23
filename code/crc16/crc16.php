@@ -35,10 +35,6 @@ $crc_table = array(
     0x6e17, 0x7e36, 0x4e55, 0x5e74, 0x2e93, 0x3eb2, 0x0ed1, 0x1ef0
 );
 
-$test = "hello world!"; // CRC16-CCITT = 0xE2B4
-$crc16 = genCRC($test);
-var_dump($crc16);
-
 function genCRC($ptr) {
     $crc = 0x0000;
     $crc_table = $GLOBALS['crc_table'];
@@ -47,3 +43,7 @@ function genCRC($ptr) {
     }
     return $crc;
 }
+
+$test = "hello world!"; // CRC16-CCITT = 0xE2B4
+$crc16 = genCRC($test);
+var_dump($crc16);
