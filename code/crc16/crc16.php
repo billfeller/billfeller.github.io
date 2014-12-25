@@ -46,4 +46,4 @@ function genCRC($ptr) {
 
 $test = "hello world!"; // CRC16-CCITT = 0xE2B4
 $crc16 = genCRC($test);
-var_dump($crc16);
+echo sprintf("the crc16 of %s is %d\n", $test, $crc16);
