@@ -20,6 +20,6 @@ long long mstime(void) {
 
 int main() {
     printf("microseconds: %lld\n", ustime());
-    printf("milliseconds: %ld\n", mstime());
+    printf("milliseconds: %lld\n", mstime());
     return 0;
 }
