@@ -18,7 +18,7 @@ int main() {
     a = a - b;
     printf("%d, %d\n", a, b);
 
-    // 不依赖任何中间变量实现交换a,b
+    // 不依赖任何中间变量实现交换a,b 只适用于非负数
     printf("%d, %d\n", a, b);
     a = a ^ b;
     b = a ^ b;
