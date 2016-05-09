@@ -1,0 +1,128 @@
+* { box-sizing: border-box; }
+
+/* links and dingbats are our only non-quilt color, keep 'em subdued…
+   mirror the colors in the quilts a little */
+a { color: #447; }
+a:hover { color: #a44; transition: 0.125s; }
+
+body {
+	font-family: Baskerville, Constantia, Palatino, Georgia, sans-serif;
+	color: #333;
+	font-size: 1.25em;
+	margin: 0; /* so we can get bleed images */
+}
+
+
+/* flexible images! that don't give a gosh-derned flip about their intrinsic dimensions! */
+img {
+	display: block;
+	width: 100%;
+}
+
+/* large and in charge */
+h1 {
+	width: 100%;
+	color: black;
+	font-weight: normal;
+	text-align: center;
+	font-size: 4em;
+	margin: 0.25em 0 -0.25em 0;
+	}
+	@media (min-width: 36em) {
+		/* embiggen */
+		h1 { font-size: 6em; }
+	}
+
+/* indent and separate block quotes from running text */
+blockquote { padding: 1em 2em; }
+
+/* indent blockquote citations */
+blockquote footer { margin-left: 2em; }
+
+/* balance top/bottom margins on intro quote */
+h1 + blockquote { margin-bottom: 3em; }
+
+/* leading and minimum whitespace between text and window edge */
+p {
+	line-height: 1.3;
+	padding: 0 1em;
+	}
+	@media (min-width: 36em) {
+		/* increase line height in response to longe line widths */
+		p { line-height: 1.6; }
+	}
+
+/* center and separate everything */
+p, blockquote, figure, img, body > footer {
+	margin: 1em auto;
+}
+
+/* keep the line lengths readable and fit figures to that column */
+p, blockquote, figure, body > footer {
+	max-width:  33em;
+}
+
+/* let the figures breathe even more than everything else */
+figure { 
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding: 0 1em;
+}
+
+/* detail images fill the viewport from edge to edge */
+.bleed {
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+	max-width: none;
+}
+
+/* seemed necessary for balance? */
+figure + .bleed { margin: 3em 0; }
+
+/* fit .pair figures side-by-side on big-enough screens */
+@media (min-width: 36em) {
+	.pair { text-align: center; }
+	.pair figure {
+		width: 50%;
+		display: inline-block;
+	}
+	/* don't double-up middle whitespace */
+	.pair figure::first-child  { padding-right: 0.5em; }
+	.pair figure::nth-child(2) { padding-left:  0.5em; }
+}
+
+/* fine print */
+figcaption, small {
+	font-size: 0.825em;
+	line-height: 1.3;
+	color: #666;
+	text-align: center;
+}
+
+figcaption { margin: 0 2em; }
+
+/* copied the "artist name in small caps" style over from my Jenson History of Art */
+.creator {
+	font-variant: small-caps; /* alas, no real small caps in system fonts, otherwise I'd use font-feature-settings: 'scmp' */
+	letter-spacing: 0.1em;
+}
+
+/* dingbats! */
+body > footer::before, h1 + blockquote::before {
+	content: "✷";
+	display: block;
+	font-size: 2rem;
+	margin: 4em 0; /* fallback */
+	margin: 4rem 0;
+	color: #a44;
+	text-align: center;
+	}
+
+
+body > footer {
+	margin: 2em auto;
+	padding: 0 1em;
+	text-align: center;
+}
