@@ -1,5 +1,0 @@
-option optimize_for = LITE_RUNTIME;
-message LogonReqMessage {
-    required int64 acctID = 1;
-    required string passwd = 2;
-}
