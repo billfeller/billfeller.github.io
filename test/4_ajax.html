@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>AJAX Request Blocking</title>
+</head>
+
+<body>
+<div id="ready"></div>
+<div id="onload"></div>
+<div id="notready"></div>
+<div id="img"></div>
+<div id="ajax"></div>
+<div id="script"></div>
+<div id="jsapiready" style="color: green;"></div>
+<script>
+var time = new Date(), TEST_URL = './test.json';
+
+loadAJAX(TEST_URL);
+
+function loadIMG(url) {
+    var img = new Image(1,1);
+    img.src = url;
+    img.onload = img.onerror = function () {
+        print('img', 'img onload/onerror events');
+    };
+}
+
+function loadScript(url) {
+    var head = document.getElementsByTagName("head")[0] || document.documentElement, node = document.createElement("script");
+    node.charset = "utf-8";
+    node.src = url;
+    node.onload = node.onerror = function () {
+        print('script', 'script onload/onerror events');
+    };
+    head.appendChild(node);
+}
+
+function loadAJAX(url) {
+    var xmlHttp;
+
+    if (window.ActiveXObject) {
+        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } else if (window.XMLHttpRequest) {
+        xmlHttp=new XMLHttpRequest();
+    }
+    xmlHttp.open("GET", url);
+    xmlHttp.send(null);
+    xmlHttp.onreadystatechange = function() {
+        if ((xmlHttp.readyState == 4) && (xmlHttp.status == 200)) {
+            print('ajax', 'ajax success events');
+        }
+    };
+}
+
+    // 打印 onload 事件耗时
+window.addEventListener("load", function(e) {
+    print('onload', 'window onload events');
+}, false);
+
+// 打印 ready 事件耗时
+document.addEventListener('DOMContentLoaded', function () {
+    print('ready', 'document ready events');
+}, false);
+
+// 检测 WeixinJSBridge 就绪耗时
+window.interval = setInterval(function () {
+    if (typeof WeixinJSBridge === 'undefined') {
+        print('notready', 'WeixinJSBridge not ready takes');
+    } else {
+        print('jsapiready', 'WeixinJSBridge ready takes');
+        clearInterval(window.interval);
+        window.interval = undefined;
+    }
+});
+
+//打印
+function print(id, msg) {
+    document.getElementById(id).innerHTML = msg + ': ' + (+new Date() - time) + 'ms';
+}
+</script>
+</body>
+</html>
