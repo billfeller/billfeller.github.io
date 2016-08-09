@@ -1,0 +1,549 @@
+open("/lib64/libonion_impl.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\n\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=7880, ...}) = 0
+mmap(NULL, 1079008, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f7965fec000
+mprotect(0x7f7965fee000, 1044480, PROT_NONE) = 0
+mmap(0x7f79660ed000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f79660ed000
+mmap(0x7f79660ee000, 22240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f79660ee000
+close(3)                                = 0
+munmap(0x7f7965fec000, 1079008)         = 0
+execve("/usr/bin/curl", ["curl", "http://www.desidime.com"], [/* 25 vars */]) = 0
+brk(0)                                  = 0x1d5c000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7bbac000
+access("/etc/ld.so.preload", R_OK)      = 0
+open("/etc/ld.so.preload", O_RDONLY)    = 3
+fstat(3, {st_mode=S_IFREG|0666, st_size=18, ...}) = 0
+mmap(NULL, 18, PROT_READ|PROT_WRITE, MAP_PRIVATE, 3, 0) = 0x7f1a7bbab000
+close(3)                                = 0
+readlink("/proc/self/exe", "/usr/bin/curl", 4096) = 13
+open("/lib64/libonion.so", O_RDONLY)    = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\10\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=7744, ...}) = 0
+mmap(NULL, 1054296, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7baa9000
+mprotect(0x7f1a7baab000, 1044480, PROT_NONE) = 0
+mmap(0x7f1a7bbaa000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f1a7bbaa000
+close(3)                                = 0
+munmap(0x7f1a7bbab000, 18)              = 0
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=65166, ...}) = 0
+mmap(NULL, 65166, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f1a7ba99000
+close(3)                                = 0
+open("/usr/lib64/libcurl.so.4", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\332\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=340200, ...}) = 0
+mmap(NULL, 2436136, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7b73b000
+mprotect(0x7f1a7b78c000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a7b98b000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x50000) = 0x7f1a7b98b000
+close(3)                                = 0
+open("/lib64/libidn.so.11", O_RDONLY)   = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0/\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=206672, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7bbab000
+mmap(NULL, 2301768, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7b509000
+mprotect(0x7f1a7b53b000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a7b73a000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x31000) = 0x7f1a7b73a000
+close(3)                                = 0
+open("/lib64/libldap-2.4.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\340\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=305984, ...}) = 0
+mmap(NULL, 2401240, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7b2be000
+mprotect(0x7f1a7b306000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a7b506000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x48000) = 0x7f1a7b506000
+close(3)                                = 0
+open("/lib64/librt.so.1", O_RDONLY)     = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@!\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=43872, ...}) = 0
+mmap(NULL, 2128816, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7b0b6000
+mprotect(0x7f1a7b0bd000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a7b2bc000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f1a7b2bc000
+close(3)                                = 0
+open("/lib64/libgssapi_krb5.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\235\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=269472, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba98000
+mmap(NULL, 2365152, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7ae74000
+mprotect(0x7f1a7aeb3000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a7b0b3000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3f000) = 0x7f1a7b0b3000
+close(3)                                = 0
+open("/lib64/libkrb5.so.3", O_RDONLY)   = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20\246\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=912944, ...}) = 0
+mmap(NULL, 3008864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7ab95000
+mprotect(0x7f1a7ac69000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a7ae69000, 45056, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd4000) = 0x7f1a7ae69000
+close(3)                                = 0
+open("/lib64/libk5crypto.so.3", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300G\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=178952, ...}) = 0
+mmap(NULL, 2275296, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7a969000
+mprotect(0x7f1a7a993000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a7ab92000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x29000) = 0x7f1a7ab92000
+close(3)                                = 0
+open("/lib64/libcom_err.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\23\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=14664, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba97000
+mmap(NULL, 2109872, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7a765000
+mprotect(0x7f1a7a768000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a7a967000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f1a7a967000
+close(3)                                = 0
+open("/usr/lib64/libssl3.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\223\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=237920, ...}) = 0
+mmap(NULL, 2334816, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7a52a000
+mprotect(0x7f1a7a561000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a7a761000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x37000) = 0x7f1a7a761000
+mmap(0x7f1a7a764000, 96, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a7a764000
+close(3)                                = 0
+open("/usr/lib64/libsmime3.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\233\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=181136, ...}) = 0
+mmap(NULL, 2276416, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7a2fe000
+mprotect(0x7f1a7a326000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a7a526000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f1a7a526000
+close(3)                                = 0
+open("/usr/lib64/libnss3.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\212\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1283888, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba96000
+mmap(NULL, 3385000, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a79fc3000
+mprotect(0x7f1a7a0f6000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a7a2f5000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x132000) = 0x7f1a7a2f5000
+mmap(0x7f1a7a2fc000, 5800, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a7a2fc000
+close(3)                                = 0
+open("/usr/lib64/libnssutil3.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\251\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=154456, ...}) = 0
+mmap(NULL, 2251040, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a79d9d000
+mprotect(0x7f1a79dbd000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a79fbc000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7f1a79fbc000
+close(3)                                = 0
+open("/lib64/libplds4.so", O_RDONLY)    = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\16\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=14560, ...}) = 0
+mmap(NULL, 2109776, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a79b99000
+mprotect(0x7f1a79b9c000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a79d9b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f1a79d9b000
+close(3)                                = 0
+open("/lib64/libplc4.so", O_RDONLY)     = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20\24\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=18720, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba95000
+mmap(NULL, 2113912, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a79994000
+mprotect(0x7f1a79998000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a79b97000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f1a79b97000
+close(3)                                = 0
+open("/lib64/libnspr4.so", O_RDONLY)    = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\320\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=240592, ...}) = 0
+mmap(NULL, 2346304, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a79757000
+mprotect(0x7f1a79790000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a7998f000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x38000) = 0x7f1a7998f000
+mmap(0x7f1a79992000, 7488, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a79992000
+close(3)                                = 0
+open("/lib64/libpthread.so.0", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340]\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=142640, ...}) = 0
+mmap(NULL, 2212848, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7953a000
+mprotect(0x7f1a79551000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a79751000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000) = 0x7f1a79751000
+mmap(0x7f1a79753000, 13296, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a79753000
+close(3)                                = 0
+open("/lib64/libdl.so.2", O_RDONLY)     = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\r\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=19536, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba94000
+mmap(NULL, 2109696, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a79336000
+mprotect(0x7f1a79338000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a79538000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f1a79538000
+close(3)                                = 0
+open("/usr/lib64/libssh2.so.1", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0pG\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=161184, ...}) = 0
+mmap(NULL, 2256472, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7910f000
+mprotect(0x7f1a79135000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a79335000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000) = 0x7f1a79335000
+close(3)                                = 0
+open("/lib64/libz.so.1", O_RDONLY)      = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\37\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=88520, ...}) = 0
+mmap(NULL, 2183696, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a78ef9000
+mprotect(0x7f1a78f0e000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a7910d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7f1a7910d000
+close(3)                                = 0
+open("/lib64/libc.so.6", O_RDONLY)      = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\356\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=1921176, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba93000
+mmap(NULL, 3750152, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a78b65000
+mprotect(0x7f1a78cef000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a78eef000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18a000) = 0x7f1a78eef000
+mmap(0x7f1a78ef4000, 18696, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a78ef4000
+close(3)                                = 0
+open("/lib64/liblber-2.4.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\3005\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=60512, ...}) = 0
+mmap(NULL, 2155816, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a78956000
+mprotect(0x7f1a78964000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a78b63000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd000) = 0x7f1a78b63000
+close(3)                                = 0
+open("/lib64/libresolv.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\00009\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=110960, ...}) = 0
+mmap(NULL, 2202248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7873c000
+mprotect(0x7f1a78752000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a78952000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7f1a78952000
+mmap(0x7f1a78954000, 6792, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a78954000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba92000
+open("/usr/lib64/libsasl2.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340F\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=106160, ...}) = 0
+mmap(NULL, 2201520, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a78522000
+mprotect(0x7f1a7853b000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a7873a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x7f1a7873a000
+close(3)                                = 0
+open("/lib64/libkrb5support.so.0", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@(\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=43696, ...}) = 0
+mmap(NULL, 2139184, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a78317000
+mprotect(0x7f1a78321000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a78520000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7f1a78520000
+close(3)                                = 0
+open("/lib64/libkeyutils.so.1", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\v\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=10192, ...}) = 0
+mmap(NULL, 2105424, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a78114000
+mprotect(0x7f1a78116000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a78315000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f1a78315000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba91000
+open("/usr/lib64/libssl.so.10", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\202\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=441240, ...}) = 0
+mmap(NULL, 2536616, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a77ea8000
+mprotect(0x7f1a77f0a000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a78109000, 45056, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x61000) = 0x7f1a78109000
+close(3)                                = 0
+open("/usr/lib64/libcrypto.so.10", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\234\6\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1963296, ...}) = 0
+mmap(NULL, 4075384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a77ac5000
+mprotect(0x7f1a77c7e000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a77e7d000, 159744, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b8000) = 0x7f1a77e7d000
+mmap(0x7f1a77ea4000, 16248, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a77ea4000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba90000
+open("/lib64/libcrypt.so.1", O_RDONLY)  = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\f\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=40400, ...}) = 0
+mmap(NULL, 2318816, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7788e000
+mprotect(0x7f1a77895000, 2097152, PROT_NONE) = 0
+mmap(0x7f1a77a95000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000) = 0x7f1a77a95000
+mmap(0x7f1a77a97000, 184800, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a77a97000
+close(3)                                = 0
+open("/lib64/libselinux.so.1", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0PX\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=122040, ...}) = 0
+mmap(NULL, 2221912, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7766f000
+mprotect(0x7f1a7768c000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a7788b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c000) = 0x7f1a7788b000
+mmap(0x7f1a7788d000, 1880, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a7788d000
+close(3)                                = 0
+open("/lib64/libfreebl3.so", O_RDONLY)  = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\2602\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0777, st_size=383504, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba8f000
+mmap(NULL, 2496224, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a7740d000
+mprotect(0x7f1a7746a000, 2093056, PROT_NONE) = 0
+mmap(0x7f1a77669000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5c000) = 0x7f1a77669000
+mmap(0x7f1a7766b000, 14048, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a7766b000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba8e000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba8d000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba8c000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7ba8a000
+arch_prctl(ARCH_SET_FS, 0x7f1a7ba8a7c0) = 0
+mprotect(0x7f1a77669000, 4096, PROT_READ) = 0
+mprotect(0x7f1a7788b000, 4096, PROT_READ) = 0
+mprotect(0x7f1a77a95000, 4096, PROT_READ) = 0
+mprotect(0x7f1a77e7d000, 110592, PROT_READ) = 0
+mprotect(0x7f1a78109000, 16384, PROT_READ) = 0
+mprotect(0x7f1a78315000, 4096, PROT_READ) = 0
+mprotect(0x7f1a78520000, 4096, PROT_READ) = 0
+mprotect(0x7f1a7873a000, 4096, PROT_READ) = 0
+mprotect(0x7f1a78952000, 4096, PROT_READ) = 0
+mprotect(0x7f1a78b63000, 4096, PROT_READ) = 0
+mprotect(0x7f1a78eef000, 16384, PROT_READ) = 0
+mprotect(0x7f1a7910d000, 4096, PROT_READ) = 0
+mprotect(0x7f1a79538000, 4096, PROT_READ) = 0
+mprotect(0x7f1a79751000, 4096, PROT_READ) = 0
+mprotect(0x7f1a7998f000, 4096, PROT_READ) = 0
+mprotect(0x7f1a79b97000, 4096, PROT_READ) = 0
+mprotect(0x7f1a79d9b000, 4096, PROT_READ) = 0
+mprotect(0x7f1a79fbc000, 24576, PROT_READ) = 0
+mprotect(0x7f1a7a2f5000, 20480, PROT_READ) = 0
+mprotect(0x7f1a7a526000, 12288, PROT_READ) = 0
+mprotect(0x7f1a7a761000, 8192, PROT_READ) = 0
+mprotect(0x7f1a7a967000, 4096, PROT_READ) = 0
+mprotect(0x7f1a7ab92000, 8192, PROT_READ) = 0
+mprotect(0x7f1a7ae69000, 36864, PROT_READ) = 0
+mprotect(0x7f1a7b0b3000, 4096, PROT_READ) = 0
+mprotect(0x7f1a7b2bc000, 4096, PROT_READ) = 0
+mprotect(0x7f1a7b506000, 4096, PROT_READ) = 0
+mprotect(0x7f1a7bbad000, 4096, PROT_READ) = 0
+munmap(0x7f1a7ba99000, 65166)           = 0
+set_tid_address(0x7f1a7ba8aa90)         = 23103
+set_robust_list(0x7f1a7ba8aaa0, 0x18)   = 0
+futex(0x7fff3253b59c, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7fff3253b59c, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, NULL, 7f1a7ba8a7c0) = -1 EAGAIN (Resource temporarily unavailable)
+rt_sigaction(SIGRTMIN, {0x7f1a7953fc60, [], SA_RESTORER|SA_SIGINFO, 0x7f1a79549710}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0x7f1a7953fcf0, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x7f1a79549710}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0
+statfs("/selinux", {f_type="EXT2_SUPER_MAGIC", f_bsize=4096, f_blocks=2581250, f_bfree=834202, f_bavail=703082, f_files=1311552, f_ffree=1039310, f_fsid={-1248962168, 1615942111}, f_namelen=255, f_frsize=4096}) = 0
+brk(0)                                  = 0x1d5c000
+brk(0x1d7d000)                          = 0x1d7d000
+open("/proc/filesystems", O_RDONLY)     = 3
+fstat(3, {st_mode=S_IFREG|0775, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7baa8000
+read(3, "nodev\tsysfs\nnodev\trootfs\nnodev\tb"..., 1024) = 346
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+munmap(0x7f1a7baa8000, 4096)            = 0
+access("/usr/share/dracut/modules.d/01fips", F_OK) = -1 ENOENT (No such file or directory)
+pipe([3, 4])                            = 0
+close(3)                                = 0
+close(4)                                = 0
+futex(0x7f1a795390ec, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+sched_get_priority_min(SCHED_OTHER)     = 0
+sched_get_priority_max(SCHED_OTHER)     = 0
+sched_getparam(23103, { 0 })            = 0
+sched_getscheduler(23103)               = 0 (SCHED_OTHER)
+sched_setscheduler(23103, SCHED_OTHER, { 0 }) = 0
+rt_sigaction(SIGPIPE, {SIG_IGN, [], SA_RESTORER, 0x7f1a79549710}, NULL, 8) = 0
+open("/usr/lib/locale/locale-archive", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=99158720, ...}) = 0
+mmap(NULL, 99158720, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f1a7157c000
+close(3)                                = 0
+open("/usr/local/app/.curlrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+ioctl(1, SNDCTL_TMR_TIMEBASE or TCGETS, {B38400 opost isig icanon echo ...}) = 0
+socket(PF_INET6, SOCK_DGRAM, IPPROTO_IP) = 3
+close(3)                                = 0
+socket(PF_NETLINK, SOCK_RAW, 0)         = 3
+bind(3, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 0
+getsockname(3, {sa_family=AF_NETLINK, pid=23103, groups=00000000}, [12]) = 0
+sendto(3, "\24\0\0\0\26\0\1\3\2124\251W\0\0\0\0\0\0\0\0", 20, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 20
+recvmsg(3, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"0\0\0\0\24\0\2\0\2124\251W?Z\0\0\2\10\200\376\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 288
+recvmsg(3, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"\24\0\0\0\3\0\2\0\2124\251W?Z\0\0\0\0\0\0\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 20
+close(3)                                = 0
+socket(PF_FILE, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_FILE, path="/var/run/nscd/socket"}, 110) = 0
+sendto(3, "\2\0\0\0\r\0\0\0\6\0\0\0hosts\0", 18, MSG_NOSIGNAL, NULL, 0) = 18
+poll([{fd=3, events=POLLIN|POLLERR|POLLHUP}], 1, 5000) = 1 ([{fd=3, revents=POLLIN|POLLHUP}])
+recvmsg(3, {msg_name(0)=NULL, msg_iov(2)=[{"hosts\0", 6}, {"\270O\3\0\0\0\0\0", 8}], msg_controllen=24, {cmsg_len=20, cmsg_level=SOL_SOCKET, cmsg_type=SCM_RIGHTS, {4}}, msg_flags=MSG_CMSG_CLOEXEC}, MSG_CMSG_CLOEXEC) = 14
+mmap(NULL, 217016, PROT_READ, MAP_SHARED, 4, 0) = 0x7f1a7ba55000
+close(4)                                = 0
+close(3)                                = 0
+open("/etc/gai.conf", O_RDONLY)         = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7baa8000
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x7f1a7baa8000, 4096)            = 0
+futex(0x7f1a78ef5f04, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 3
+connect(3, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("139.162.26.10")}, 16) = 0
+getsockname(3, {sa_family=AF_INET, sin_port=htons(52703), sin_addr=inet_addr("10.208.151.28")}, [16]) = 0
+close(3)                                = 0
+socket(PF_INET6, SOCK_DGRAM, IPPROTO_IP) = 3
+connect(3, {sa_family=AF_INET6, sin6_port=htons(80), inet_pton(AF_INET6, "2400:8901:1::8ba2:1a0a", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+close(3)                                = 0
+socket(PF_INET, SOCK_STREAM, IPPROTO_TCP) = 3
+setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+fcntl(3, F_GETFL)                       = 0x2 (flags O_RDWR)
+fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+connect(3, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("139.162.26.10")}, 16) = -1 EINPROGRESS (Operation now in progress)
+poll([{fd=3, events=POLLOUT|POLLWRNORM}], 1, 150000) = 1 ([{fd=3, revents=POLLOUT|POLLWRNORM}])
+getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+sendto(3, "GET / HTTP/1.1\r\nUser-Agent: curl"..., 171, MSG_NOSIGNAL, NULL, 0) = 171
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 0 (Timeout)
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 0 (Timeout)
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "HTTP/1.1 200 OK\r\nServer: nginx/1"..., 16384, 0, NULL, NULL) = 5440
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 1), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a7baa8000
+write(1, "<!DOCTYPE html>\n<html>\n<head>\n<m"..., 4096) = 4096
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "]?t[1]:0,t[0]=a(t[0],\"fn-\",this,"..., 16384, 0, NULL, NULL) = 10880
+write(1, ",function(){return s(n,\"fn-\",nul"..., 1024) = 1024
+write(1, "nPlace(e,[\"onreadystatechange\"],"..., 10240) = 10240
+write(1, "='online shopping india, best de"..., 95) = 95
+write(1, "<meta content='width=device-widt"..., 52) = 52
+write(1, "<!-- open graph protocal -->\n", 29) = 29
+write(1, "<meta content='Desidime' propert"..., 50) = 50
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "mage'>\n<meta content='Online Sho"..., 16384, 0, NULL, NULL) = 5440
+write(1, "<meta content='http://cdn2.desid"..., 1024) = 1024
+write(1, " price.\" name='twitter:descripti"..., 4096) = 4096
+write(1, "oogle-btn\" href=\"/auth/google_oa"..., 163) = 163
+write(1, "</div>\n", 7)                 = 7
+write(1, "</div>\n", 7)                 = 7
+write(1, "</form>\n", 8)                = 8
+write(1, "\n", 1)                       = 1
+write(1, "<div class='pop-footer link-clr'"..., 34) = 34
+write(1, "<a href=\"#\" id=\"sign_up\" onclick"..., 156) = 156
+write(1, "</div>\n", 7)                 = 7
+write(1, "</div>\n", 7)                 = 7
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "id='signup_form_div'>\n<a class=\""..., 16384, 0, NULL, NULL) = 10880
+write(1, "<div class='pop' id='signup_form"..., 1024) = 1024
+write(1, "r_password_confirmation\" name=\"u"..., 9216) = 9216
+write(1, "um/10600628_837893066235504_1260"..., 69) = 69
+write(1, "</div>\n", 7)                 = 7
+write(1, "<div>\n", 6)                  = 6
+write(1, "<strong>billa ajith</strong>\n", 29) = 29
+write(1, "</div>\n", 7)                 = 7
+write(1, "<div class='gutter-bottom height"..., 37) = 37
+write(1, "~*Billa Ajith*~\n", 16)       = 16
+write(1, "</div>\n", 7)                 = 7
+write(1, "<div class='subscriber'>\n", 25) = 25
+write(1, "<span class='ico ico-tv'></span>"..., 33) = 33
+write(1, "2225 subscriber\n", 16)       = 16
+write(1, "</div>\n", 7)                 = 7
+write(1, "</div>\n", 7)                 = 7
+write(1, "</a></div>\n", 11)            = 11
+write(1, "<div class='grid-50 tablet-grid-"..., 46) = 46
+write(1, "<a href=\"/channels\"><div class='"..., 56) = 56
+write(1, "<div class='count'>\n", 20)   = 20
+write(1, "<span><i class='ico ico-fire gut"..., 56) = 56
+write(1, "</span>\n", 8)                = 8
+write(1, "</div>\n", 7)                 = 7
+write(1, "<div class='clearfix'></div>\n", 29) = 29
+write(1, "<div class='channel-imgbox'>\n", 29) = 29
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "xho3_500.gif?1448131429\" />\n</di"..., 16384, 0, NULL, NULL) = 1360
+write(1, "<img alt=\"Tumblr n4kqg2kerk1tzsj"..., 1024) = 1024
+write(1, "ef=\"/price-compare/womens_clothi"..., 56) = 56
+write(1, "</li>\n", 6)                  = 6
+write(1, "<li>\n", 5)                   = 5
+write(1, "<a href=\"/price-compare/womens_b"..., 90) = 90
+write(1, "</li>\n", 6)                  = 6
+write(1, "<li>\n", 5)                   = 5
+write(1, "<a href=\"/price-compare/mens_clo"..., 57) = 57
+write(1, "</li>\n", 6)                  = 6
+write(1, "<li>\n", 5)                   = 5
+write(1, "<a href=\"/price-compare/mens_foo"..., 57) = 57
+write(1, "</li>\n", 6)                  = 6
+write(1, "<li class='new-alert'>\n", 23) = 23
+write(1, "<span id='triangle-topleft'></sp"..., 36) = 36
+write(1, "<a href=\"/price_alerts\">Price Al"..., 41) = 41
+write(1, "</li>\n", 6)                  = 6
+write(1, "</ul>\n", 6)                  = 6
+write(1, "</div>\n", 7)                 = 7
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "w-grid'>\n<div class='top-channel"..., 16384, 0, NULL, NULL) = 16384
+write(1, "<div class='grid-70 tablet-grid-"..., 1024) = 1024
+write(1, "ploads/attachment/image/7861/thu"..., 15360) = 15360
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "6117522.jpg?1470683123\" src=\"htt"..., 16384, 0, NULL, NULL) = 9456
+write(1, ".desidime.com/topics/photos/5713"..., 1024) = 1024
+write(1, "like-count'>\n<span class='ico ic"..., 8192) = 8192
+write(1, "><span class='deal-date deal-hea"..., 187) = 187
+write(1, "</div>\n", 7)                 = 7
+write(1, "<div class='deal-box-image fpd_p"..., 42) = 42
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "rst-transaction-using-icici-bank"..., 16384, 0, NULL, NULL) = 2720
+write(1, "<a href=\"/forums/hot-deals-onlin"..., 1024) = 1024
+write(1, "0\n</span>\n</div>\n<div class='dea"..., 1024) = 1024
+write(1, "me.com/assets/grey.gif\" /></a>\n", 31) = 31
+write(1, "<a class=\"nyroModal\" href=\"/foru"..., 225) = 225
+write(1, "</div>\n", 7)                 = 7
+write(1, "<div class='deal-dsp'><a href=\"/"..., 199) = 199
+write(1, "<div class='deal-price'>\n", 25) = 25
+write(1, "<span class='rupee_fonts'>`</spa"..., 35) = 35
+write(1, "1999.0\n", 7)                 = 7
+write(1, "</div>\n", 7)                 = 7
+write(1, "<div class='deal-discount'>\n", 28) = 28
+write(1, "75% OFF\n", 8)                = 8
+write(1, "<span class='rupee_fonts regular"..., 41) = 41
+write(1, "`\n", 2)                      = 2
+write(1, "7999.0\n", 7)                 = 7
+write(1, "</span>\n", 8)                = 8
+write(1, "</div>\n", 7)                 = 7
+write(1, "<div class='deal-store'>\n", 25) = 25
+write(1, "at\n", 3)                     = 3
+write(1, "<a href=\"/stores/amazon-india\">A"..., 48) = 48
+write(1, "</div>\n", 7)                 = 7
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "iv>\n</li>\n<li class='grid-25 tab"..., 16384, 0, NULL, NULL) = 16384
+write(1, "</div>\n</li>\n<li class='grid-25 "..., 1024) = 1024
+write(1, "h-rs-120-each-with-every-purchas"..., 15360) = 15360
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "iginal=\"http://cdn0.desidime.com"..., 16384, 0, NULL, NULL) = 16256
+write(1, "-original=\"http://cdn0.desidime."..., 1024) = 1024
+write(1, "ms/hot-deals-online/topics/xbox-"..., 14336) = 14336
+write(1, "eg?1470661895\" title=\"Venus EPS-"..., 75) = 75
+write(1, "</div>\n", 7)                 = 7
+write(1, "<div class='media-body'>\n", 25) = 25
+write(1, "<span>\n", 7)                 = 7
+write(1, "Flipkart - Venus EPS-3699 Digita"..., 74) = 74
+write(1, "</span>\n", 8)                = 8
+write(1, "</div>\n", 7)                 = 7
+write(1, "</a></li>\n", 10)             = 10
+write(1, "<li class='media cf'>\n", 22) = 22
+write(1, "<a href=\"/forums/hot-deals-onlin"..., 130) = 130
+write(1, "<img alt=\"Sansui 1 Ton 3 Star Sp"..., 260) = 260
+write(1, "</div>\n", 7)                 = 7
+write(1, "<div class='media-body'>\n", 25) = 25
+write(1, "<span>\n", 7)                 = 7
+write(1, "Flipkart - Sansui 1 Ton 3 Star S"..., 74) = 74
+write(1, "</span>\n", 8)                = 8
+write(1, "</div>\n", 7)                 = 7
+write(1, "</a></li>\n", 10)             = 10
+write(1, "<li class='media cf'>\n", 22) = 22
+write(1, "<a href=\"/forums/hot-deals-onlin"..., 106) = 106
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "=\"Upto 70% OFF on Peter England\""..., 16384, 0, NULL, NULL) = 5440
+write(1, "<img alt=\"Upto 70% OFF on Peter "..., 1024) = 1024
+write(1, "age\" src=\"http://cdn0.desidime.c"..., 4096) = 4096
+write(1, "ht B22 14-Watt LED Bulb (Cool Da"..., 59) = 59
+write(1, "</div>\n", 7)                 = 7
+write(1, "</a></li>\n", 10)             = 10
+write(1, "<li class='media cf'>\n", 22) = 22
+write(1, "<a href=\"/forums/hot-deals-onlin"..., 150) = 150
+write(1, "<div class='vote-count'>\n", 25) = 25
+write(1, "<span class='ico ico-voteup'></s"..., 37) = 37
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "space2'>1</span>\n</div>\n<div cla"..., 16384, 0, NULL, NULL) = 16384
+write(1, "<span class='like-space2'>1</spa"..., 1024) = 1024
+write(1, ">\n      <li class=\"link-clr medi"..., 15360) = 15360
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 1000) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+poll([{fd=3, events=POLLIN|POLLPRI|POLLRDNORM|POLLRDBAND}], 1, 0) = 1 ([{fd=3, revents=POLLIN|POLLRDNORM}])
+recvfrom(3, "metics, Sports and Outdoor Activ"..., 10348, 0, NULL, NULL) = 10348
+write(1, "ersonal care & Cosmetics, Sports"..., 1024) = 1024
+write(1, "ns for that particular store. Yo"..., 9216) = 9216
+write(1, "<div id='chat-box-container'></d"..., 36) = 36
+write(1, "\n", 1)                       = 1
+write(1, "\n", 1)                       = 1
+write(1, "</footer>\n", 10)             = 10
+write(1, "<!-- end of footer tag -->\n", 27) = 27
+write(1, "</div>\n", 7)                 = 7
+write(1, "<!-- end of wrapper tag -->\n", 28) = 28
+write(1, "</body>\n", 8)                = 8
+write(1, "</html>\n", 8)                = 8
+close(3)                                = 0
+exit_group(0)                           = ?
