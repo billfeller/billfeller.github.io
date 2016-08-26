@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!-- saved from url=(0034)http://prerender-test.appspot.com/ -->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Prerender Test</title>
+    <link rel="stylesheet" href="./static/default.css" type="text/css">
+    <script src="./static/prerender.js"></script>
+</head>
+
+<body onload="check_prerender_enabled()">
+    <div id="container">
+        <div id="inner">
+            <h1>Prerender test</h1>
+            <form onsubmit="return prerender_url()">
+                <input type="text" id="url">
+                <input type="submit" id="url_submit" value="Prerender">
+            </form>
+            <br>
+            <span id="progress">Prerender is ENABLED</span>
+            <a id="anchor"></a>
+            <br>
+            <div id="learn_more">Learn more about <a href="http://code.google.com/chrome/whitepapers/prerender.html">prerendering in Chrome</a>.
+            </div>
+        </div>
+
+
+    </div>
+    <link id="prerender" rel="prerender" href="http://usopp.xyz/jekyll_blog/">
+</body>
+
+</html>
