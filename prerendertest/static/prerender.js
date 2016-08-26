@@ -86,7 +86,7 @@ function check_prerender_enabled() {
     // If we time out, mark prerendering as disabled.
     var disabledTimeout = window.setTimeout(function() {
       set_prerender_enabled(false);
-    }, 2000);
+    }, 5000);
 
     window.addEventListener('storage', function(event) {
       if (event.key == 'prerender-enabled-' + id) {
