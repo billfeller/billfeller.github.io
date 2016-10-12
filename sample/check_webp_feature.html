@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+  <script async defer>
+    function check_webp_feature(feature, callback) {
+        var kTestImages = {
+            lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
+            lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+            alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+            animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+        };
+        var img = new Image();
+        img.onload = callback
+        img.src = "data:image/webp;base64," + kTestImages[feature];
+    }
+    check_webp_feature('lossy', function(){
+        [].slice.call(document.querySelectorAll('[data-webp-src]')).forEach(function(el){
+            el.setAttribute('src', el.getAttribute('data-webp-src'))
+        })
+        document.querySelector('#formatLabel').textContent = 'WEBP'
+    });
+  </script>
+</head>
+<body>
+  <h4>You are using <span id="formatLabel">JPG</span></h4>
+  <img src="https://www.gstatic.com/webp/gallery/4.sm.jpg"
+       data-webp-src="https://www.gstatic.com/webp/gallery/4.sm.webp">
+</body>
+</html>
