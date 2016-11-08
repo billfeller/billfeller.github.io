@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../images/background.jpeg");
+    font-family: 'Roboto';
+    background-color: #033250;
+}
+
+.logo-text{
+    fill:#fff;
+}
+
+.sp-logo{
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.logo-1{
+    fill: #F9A141;
+}
+
+.logo-2{
+    fill: #258AAF;
+}
+
+div{
+    color: #fff;
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    line-height: 35px;
+}
