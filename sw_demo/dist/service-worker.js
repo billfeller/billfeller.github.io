@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["index.html","e9a26b2426d002a77d18609300870fcc"],["index.js","0426e019d2e15ad8f1fc94796003b0de"],["style.css","092f17424c3336b4705c6b6e4db5addd"]];
+var precacheConfig = [["index.html","1f740d06a705aa17cb77973e8bb3b382"],["index.js","0426e019d2e15ad8f1fc94796003b0de"],["style.css","092f17424c3336b4705c6b6e4db5addd"]];
 var cacheName = 'sw-precache-v2--' + (self.registration ? self.registration.scope : '');
 
 
@@ -249,7 +249,7 @@ self.addEventListener('fetch', function(event) {
 
 // Runtime cache configuration, using the sw-toolbox library.
 
-toolbox.router.get(/^https:\/\/pc[1-4]\.gtimg\.com\//, toolbox.fastest, {"cache":{"name":"cdn"}});
+toolbox.router.get(/^https:\/\/cloud\.githubusercontent\.com\//, toolbox.fastest, {"cache":{"name":"cdn"}});
 
 
 
