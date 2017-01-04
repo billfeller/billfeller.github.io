@@ -10,7 +10,7 @@ gulp.task('gsw', function(callback) {
         staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}'],
         stripPrefix: rootDir,
         runtimeCaching: [{
-            urlPattern: /^https:\/\/pc[1-4]\.gtimg\.com\//,                             // cdn
+            urlPattern: /^https:\/\/cloud\.githubusercontent\.com\//,                             // cdn
             handler: 'fastest',
             options: {
                 cache: {
