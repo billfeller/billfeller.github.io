@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>service worker test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="banner-img">
+        <a href="javascript:;" title="QQ">
+            <img src="https:/pc3.gtimg.com/softmgr/picture/web/banner/ac4f91ae41cda43113f855d70743e6a3.png" alt="QQ" />
+        </a>
+    </div>
+
+    <script src="index.js"></script>
+
+    <script type="text/javascript">
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register("service-worker.js").then(function (registration) {
+                    // 预加载逻辑
+                }).catch(function(err) {  });
+            });
+        }
+    </script>
+</body>
+</html>

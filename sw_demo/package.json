@@ -1,0 +1,17 @@
+{
+  "name": "sw_demo",
+  "version": "1.0.0",
+  "description": "service worker",
+  "scripts": {},
+  "keywords": [],
+  "author": "wadezhan",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "sw-precache": "^4.2.3",
+    "sw-toolbox": "^3.4.0"
+  },
+  "devDependencies": {
+    "gulp-connect": "^5.0.0"
+  }
+}
