@@ -1,80 +1,104 @@
 <!DOCTYPE html>
 <html style="height: 100%">
-   <head>
-       <meta charset="utf-8">
-   </head>
-   <body style="height: 100%; margin: 0">
-       <div id="container" style="height: 100%"></div>
-       <script type="text/javascript" src="//echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
-       <script type="text/javascript" src="//echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
-       <script type="text/javascript" src="//echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
-       <script type="text/javascript" src="//echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
-       <script type="text/javascript" src="//echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
-       <script type="text/javascript" src="//echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
-       <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
-       <script type="text/javascript" src="//echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
-       <script type="text/javascript" src="//echarts.baidu.com/gallery/vendors/simplex.js"></script>
-       <script type="text/javascript">
-var dom = document.getElementById("container");
-var myChart = echarts.init(dom);
-var app = {};
-option = null;
-var data = [["2018-03-29",1.49],["2018-03-30",-0.05],["2018-03-28",-2.04],["2018-03-27",0.93],["2018-03-26",-0.88],["2018-03-23",-2.93],["2018-03-22",-0.94],["2018-03-21",-0.47],["2018-03-20",0.28],["2018-03-19",0.19],["2018-03-16",-0.65],["2018-03-15",0.47],["2018-03-14",-0.23],["2018-03-13",-0.83],["2018-03-12",0.23],["2018-03-09",0.37],["2018-03-08",1.08],["2018-03-07",-0.7],["2018-03-06",1.28],["2018-03-05",-0.19],["2018-03-02",-1.03],["2018-03-01",0.71]];
 
-option = {
-    title: {
-        text: "景顺长城沪深300增强(000311) 2018.03 日增长率日历视图",
-    },
-    tooltip: {
-        position: 'top'
-    },
-    visualMap: [{
-        type: "piecewise",
-        min: -3,
-        max: 3,
-        splitNumber: 2,
-        pieces: [
-            {min: -3, max: 0, color: 'green'},
-            {min: 0, max: 3, color: 'red'}
-        ],
-        calculable: true,
-        orient: 'horizontal',
-        left: 350,
-        top: 450
-    }],
-    calendar: [{
-        orient: 'vertical',
-        yearLabel: {
-            show: false,
-            margin: 0
-        },
-        dayLabel: {
-            firstDay: 1,
-            nameMap: ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
-        },
-        monthLabel: {
-            nameMap: 'cn',
-            margin: 20
-        },
-        cellSize: 60,
-        top: 100,
-        left: 50,
-        range: '2018-03'
-    }],
-    series: [{
-        type: 'scatter',
-        coordinateSystem: 'calendar',
-        coordinateSystem: 'calendar',
-        symbolSize: function (val) {
-            return val[1] * 25;
-        },
-        data: data
-    }]
-};
-;
-if (option && typeof option === "object") {
-    myChart.setOption(option, true);
-}
-       </script>
-   </body>
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+    <script type="text/javascript" src="echarts.min.js"></script>
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        var data = [
+            ["2018-03-29", 1.49],
+            ["2018-03-30", -0.05],
+            ["2018-03-28", -2.04],
+            ["2018-03-27", 0.93],
+            ["2018-03-26", -0.88],
+            ["2018-03-23", -2.93],
+            ["2018-03-22", -0.94],
+            ["2018-03-21", -0.47],
+            ["2018-03-20", 0.28],
+            ["2018-03-19", 0.19],
+            ["2018-03-16", -0.65],
+            ["2018-03-15", 0.47],
+            ["2018-03-14", -0.23],
+            ["2018-03-13", -0.83],
+            ["2018-03-12", 0.23],
+            ["2018-03-09", 0.37],
+            ["2018-03-08", 1.08],
+            ["2018-03-07", -0.7],
+            ["2018-03-06", 1.28],
+            ["2018-03-05", -0.19],
+            ["2018-03-02", -1.03],
+            ["2018-03-01", 0.71]
+        ];
+
+        option = {
+            title: {
+                text: "景顺长城沪深300增强(000311) 2018.03 日增长率日历视图",
+            },
+            tooltip: {
+                position: 'top'
+            },
+            visualMap: [{
+                type: "piecewise",
+                min: -3,
+                max: 3,
+                splitNumber: 2,
+                pieces: [{
+                        min: -3,
+                        max: 0,
+                        color: 'green'
+                    },
+                    {
+                        min: 0,
+                        max: 3,
+                        color: 'red'
+                    }
+                ],
+                calculable: true,
+                orient: 'horizontal',
+                left: 350,
+                top: 450
+            }],
+            calendar: [{
+                orient: 'vertical',
+                yearLabel: {
+                    show: false,
+                    margin: 0
+                },
+                dayLabel: {
+                    firstDay: 1,
+                    nameMap: ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
+                },
+                monthLabel: {
+                    nameMap: 'cn',
+                    margin: 20
+                },
+                cellSize: 60,
+                top: 100,
+                left: 50,
+                range: '2018-03'
+            }],
+            series: [{
+                type: 'scatter',
+                coordinateSystem: 'calendar',
+                coordinateSystem: 'calendar',
+                symbolSize: function (val) {
+                    return val[1] * 25;
+                },
+                data: data
+            }]
+        };;
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+</body>
+
 </html>
