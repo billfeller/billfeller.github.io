@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://www.html5tricks.com/demo/html5-webgl-particle-animation/index2.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HTML5 WebGL粒子爆炸动画DEMO演示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="c" width="1920" height="949"></canvas>
+    <script id="shader-fs" type="x-shader/x-fragment">
+        #ifdef GL_ES
+            precision highp float;
+        #endif
+
+        void main(void) {
+            gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
+        }
+    </script>
+    <script id="shader-vs" type="x-shader/x-vertex">
+        attribute vec3 vertexPosition;
+        uniform mat4 modelViewMatrix;
+        uniform mat4 perspectiveMatrix;
+        void main(void) {
+            gl_Position = perspectiveMatrix * modelViewMatrix * vec4( vertexPosition, 1.0);
+        }
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
