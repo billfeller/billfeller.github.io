@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>canvas flyline test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+
+        var data = {
+            start: [ 50, 200 ],
+            end: [ 350, 200 ],
+            __t: 0
+        }
+
+        function _draw() {
+            context.clearRect(0, 0, canvas.width, canvas.height)
+            var [startX, startY] = data.start
+            var [endX, endY] = data.end
+            var controlPoint = [
+                (data.start[0] + data.end[0]) / 2, 
+                (data.start[1] + data.end[1]) / 2.5
+            ];
+            // 获取曲线上的点
+            getPoint = SquareBezier(data.start, controlPoint, data.end)
+            
+            /*
+                根据时刻 t 来决定绘画状态
+                t < 1, 光点前进
+                t === 1, 光点到达
+                t < 2，  光点收尾
+                t === 2，光点消失
+                实际编程中还可以根据 t 来决定绘画状态
+            */
+            if (data.__t == 0) {
+                
+            }
+            if (data.__t < 2) {
+                data.__t += 0.2;
+                var grd // 渐进色
+                if (data.__t <= 1) {
+                    grd = context.createLinearGradient(...[
+                        ...data.start, // start
+                        ...getPoint(data.__t) // B(t)
+                    ]);
+                } else {
+                    grd = context.createLinearGradient(...[
+                        ...getPoint(data.__t - 1), // B(t-1)
+                        ...data.end // end
+                    ]);
+                }
+
+                grd.addColorStop(0, "#ffffff");
+                grd.addColorStop(0.9, "#00ffe7");
+                grd.addColorStop(1, "#ffffff");
+
+                context.beginPath();
+                context.moveTo(data.start[0], data.start[1]);
+                context.quadraticCurveTo(controlPoint[0], controlPoint[1], data.end[0], data.end[1]);
+                context.strokeStyle = grd;
+                context.lineWidth = 2;
+                context.stroke();
+            } else {
+                data.__t = 0;
+            }
+            
+            //绘制起始点和结束点
+            let saveFill = context.fillStyle;
+            let t = data.__t
+            if (t <= 1.6) {
+                context.beginPath();
+                let _t = t < 0.6 ? t : 0.6;
+                _t = _t > 0.1 ? _t : 0.1;
+                context.fillStyle = 'rgba(255, 131, 8, 0.05)'
+                context.arc(data.start[0], data.start[1], _t / 0.6 * 28, 0, Math.PI * 2)
+                context.arc(data.end[0], data.end[1], _t / 0.6 * 28, 0, Math.PI * 2)
+                context.fill()
+
+                context.beginPath()
+                _t = t < 0.4 ? t : 0.4
+                _t = _t > 0.1 ? _t : 0.1;
+                context.fillStyle = 'rgba(255, 131, 8, 0.2)'
+                context.arc(data.start[0], data.start[1], _t / 0.4 * 16, 0, Math.PI * 2)
+                context.arc(data.end[0], data.end[1], _t / 0.4 * 16, 0, Math.PI * 2)
+                context.fill()
+
+
+                context.beginPath()
+                _t = t < 0.2 ? t : 0.2
+                _t = _t > 0.1 ? _t : 0.1;
+                context.fillStyle = 'rgba(255, 131, 8, 0.9)'
+                context.arc(data.start[0], data.start[1], _t / 0.2 * 8, 0, Math.PI * 2)
+                context.arc(data.end[0], data.end[1], _t / 0.2 * 8, 0, Math.PI * 2)
+                context.fill()
+            } else {
+                context.beginPath()
+                t = 2 - t
+                t < 0 && (t = 0)
+                let _t = t < 0.4 ? t : 0.4
+                _t = _t > 0.1 ? _t : 0.1;
+                context.fillStyle = 'rgba(255, 131, 8, 0.05)'
+                context.arc(data.start[0], data.start[1], _t / 0.4 * 28, 0, Math.PI * 2)
+                context.arc(data.end[0], data.end[1], _t / 0.4 * 28, 0, Math.PI * 2)
+                context.fill()
+
+                context.beginPath()
+                _t = t < 0.2 ? t : 0.2
+                _t = _t > 0.1 ? _t : 0.1;
+                context.fillStyle = 'rgba(255, 131, 8, 0.2)'
+                context.arc(data.start[0], data.start[1], _t / 0.2 * 16, 0, Math.PI * 2)
+                context.arc(data.end[0], data.end[1], _t / 0.2 * 16, 0, Math.PI * 2)
+                context.fill()
+
+
+                context.beginPath()
+                _t = t < 0.1 ? t : 0.1
+                _t = _t > 0.1 ? _t : 0.1;
+                context.fillStyle = 'rgba(255, 131, 8, 0.9)'
+                context.arc(data.start[0], data.start[1], _t / 0.1 * 8, 0, Math.PI * 2)
+                context.arc(data.end[0], data.end[1], _t / 0.1 * 8, 0, Math.PI * 2)
+                context.fill()
+            }
+            
+            context.fillStyle = saveFill
+            
+            context.font = "16px";
+            context.fillText("start", data.start[0] - 35, data.start[1]);
+            context.fillText("end", data.end[0] + 25, data.end[1]);
+        }
+
+        /* 二次方bezier（若想自定义抛物线则修改控制点）
+         * 计算公式：
+         * B(t) = (1 - t)^2 P0 + 2 t (1 - t) P1 + t^2 P2;
+         **/
+        function SquareBezier(startPoint, controlPoint, endPoint) {
+            const [startX, startY] = startPoint
+            const [endX, endY] = endPoint
+            const [controlX, controlY] = controlPoint
+            return function(t) {
+                const x = (1 - t) * (1 - t) * startX + 2 * t * (1 - t) * controlX + t * t * endX
+                const y = (1 - t) * (1 - t) * startY + 2 * t * (1 - t) * controlY + t * t * endY
+                return [x, y]
+            };
+        };
+    </script>
+</body>
+</html>
