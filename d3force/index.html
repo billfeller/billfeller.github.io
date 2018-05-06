@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .links line {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+        
+        .nodes circle {
+            stroke: #fff;
+            stroke-width: 1.5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="add()">add item</button>
+        <button onclick="remove()">remove item</button>
+        <button onclick="filter()">filter</button>
+    </div>
+    <script src="d3.v5.min.js"></script>
+    <script>
+        var width = 500;
+        var height = 500;
+        var svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+        var graph = {
+            "nodes": [
+                { "id": "1", "radius": 20, "group": 1 },
+                { "id": "2", "radius": 15, "group": 2 },
+                { "id": "3", "radius": 30, "group": 1 },
+                { "id": "4", "radius": 10, "group": 3 },
+                { "id": "5", "radius": 8, "group": 4 },
+            ],
+            "links": [
+                { "source": "2", "target": "1", "value": 16 },
+                { "source": "1", "target": "4", "value": 8 },
+                { "source": "4", "target": "5", "value": 1 },
+            ],
+        };
+
+        var simulation = d3.forceSimulation()
+            .force("link", d3.forceLink().id(function(d) { return d.id; }))
+            .force("charge", d3.forceManyBody()) // 设置节点电荷数
+            .force("center", d3.forceCenter(width / 2, height / 2));
+        // calculate min/max values
+        var minSize = 0,
+            maxSize = 0;
+        for (var i = 0; i < graph.nodes.length; i++) {
+            var minSize = Math.min(minSize, graph.nodes[i].radius);
+            var maxSize = Math.max(maxSize, graph.nodes[i].radius);
+        }
+
+        var color = d3.scaleOrdinal(d3.schemeAccent);
+        var nodesize = d3.scaleSqrt().domain([5, 20]).range([10, 15]);
+
+        var link = svg.append("g")
+                    .attr("class", "links")
+                    .selectAll("line")
+                    .data(graph.links)
+                    .enter()
+                    .append("line")
+                    .attr("stroke-width", function(d) { 
+                        return Math.sqrt(d.value); 
+                    });
+
+        var node = svg.append("g")
+                    .attr("class", "nodes")
+                    .selectAll("circle")
+                    .data(graph.nodes)
+                    .enter()
+                    .append("circle")
+                    .attr("r", function (d) {
+                        return nodesize(d.radius);
+                    })
+                    .attr("fill", function(d) { 
+                        return color(d.group); 
+                    })
+                    .call(d3.drag()
+                        .on("start", dragstarted)
+                        .on("drag", dragged)
+                        .on("end", dragended));
+
+        var text = svg.append("g")
+                    .attr("class", "texts")
+                    .selectAll("text")
+                    .data(graph.nodes)
+                    .enter()
+                    .append("text")
+                    .attr("text-anchor", "middle")
+                    .attr("font-size", function (d) {
+                        return nodesize(d.radius);
+                    })
+                    .text(function(d) { 
+                        return d.id; 
+                    })
+                    .attr("X", function (d) {
+                        return d.x;
+                    })
+                    .attr("y", function (d) {
+                        return d.y;
+                    });
+
+        simulation
+            .nodes(graph.nodes)
+            .on("tick", ticked)
+            // .on("end", ticked);
+
+        simulation.force("link")
+            .links(graph.links);
+
+        function ticked() {
+            // 更新链接位置
+            link.attr("x1", function(d) { return d.source.x; })
+                .attr("y1", function(d) { return d.source.y; })
+                .attr("x2", function(d) { return d.target.x; })
+                .attr("y2", function(d) { return d.target.y; });
+
+            // 更新节点位置
+            node.attr("cx", function(d) { return d.x; })
+                .attr("cy", function(d) { return d.y; });
+                
+            // 更新标签位置
+            text.attr("x", function(d) { return d.x; })
+                .attr("y", function(d) { return d.y; });
+        }
+        
+        function dragstarted(d) {
+            if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+            // 拖拽开始后设定被拖拽对象位置为固定 (fx, fy)
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(d, i) {
+            d3.select(this).style("fill", "yellow")
+            d.fx = d3.event.x;
+            d.fy = d3.event.y;
+        }
+
+        function dragended(d) {
+            if (!d3.event.active) simulation.alphaTarget(0);
+            d3.select(this).style("fill", color(d.group));
+            // d.fx = null;
+            // d.fy = null;
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+        
+        function add() {
+            // 添加节点
+        }
+        
+        function remove() {
+            // 删除节点
+        }
+        
+        function filter() {
+            // 过滤节点
+        }
+    </script>
+</body>
+</html>
