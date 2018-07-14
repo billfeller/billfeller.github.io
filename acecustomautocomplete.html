@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ace custom autocomplete test</title>
+		<script src="https://ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js"></script>
+		<script src="https://ajaxorg.github.io/ace-builds/src-min-noconflict/ext-language_tools.js"></script>
+		<style>
+			body {
+				overflow: hidden;
+			}
+			#editorWidget {
+				margin: 0;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<pre id="editorWidget"></pre>
+	</body>
+<script>
+var langTools = ace.require("ace/ext/language_tools");
+var aceEditor = ace.edit("editorWidget").setOptions({
+	enableBasicAutocompletion: true,
+	enableLiveAutocompletion: true,
+	enableSnippets: false
+});
+
+var myList = [
+	"/dev/sda1",
+	"/dev/sda2",
+	"PARTLABEL=foobar_boot",
+	"PARTLABEL=foobar_root"
+]
+
+var myCompleter = {
+	identifierRegexps: [/[^\s]+/],
+	getCompletions: function(editor, session, pos, prefix, callback) {
+		console.info("myCompleter prefix:", prefix);
+		callback(
+			null,
+			myList.filter(entry=>{
+				return entry.includes(prefix);
+			}).map(entry=>{
+				return {
+					value: entry
+				};
+			})
+		);
+	}
+}
+
+langTools.addCompleter(myCompleter);
+
+</script>
+</html>
