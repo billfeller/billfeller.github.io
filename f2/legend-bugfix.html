@@ -21,7 +21,7 @@
 <p style="text-align: center;">F2 版本：3.2.0-beta.12</p>
 <p style="text-align: center;">缩放手势需要在手机端操作，请手机扫码观看</p>
 <script>
-$.getJSON('/assets/data/f2/cereal.json', function(data) {
+$.getJSON('./cereal.json', function(data) {
   var chart = new F2.Chart({
     id: 'mountNode',
     pixelRatio: window.devicePixelRatio
