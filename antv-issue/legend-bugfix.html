@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="chart-name" content="散点图缩放平移">
+    <title>F2 图表组件库 - AntV</title>
+    <link rel="stylesheet" href="https://gw.alipayobjects.com/os/rmsportal/XQbQUStlgGlnVrWMZhrb.css" />
+
+</head>
+<body>
+  <div class="chart-wrapper">
+    <canvas id="mountNode"></canvas>
+  </div>
+<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
+
+<script src="./f2-all.min.js"></script>
+
+<script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+<script src="https://gw.alipayobjects.com/os/rmsportal/NjNldKHIVQRozfbAOJUW.js"></script>
+<p style="text-align: center;">F2 版本：3.2.0-beta.12</p>
+<p style="text-align: center;">缩放手势需要在手机端操作，请手机扫码观看</p>
+<script>
+$.getJSON('/assets/data/f2/cereal.json', function(data) {
+  var chart = new F2.Chart({
+    id: 'mountNode',
+    pixelRatio: window.devicePixelRatio
+  });
+  chart.source(data);
+  chart.legend({
+    position: 'bottom',
+    itemWidth: null,
+    align: 'center'
+  });
+  chart.tooltip(false);
+  chart.point().position('Calories*Potassium').color('Manufacturer').style({
+    fillOpacity: 0.6
+  });
+  chart.interaction('pan', {
+    mode: 'xy'
+  }).interaction('pinch', {
+    mode: 'xy'
+  });
+  chart.render();
+});
+</script>
+</body>
+</html>
